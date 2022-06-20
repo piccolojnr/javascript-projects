@@ -1,0 +1,113 @@
+/* Variabes */
+:root{  
+--orange: #ffa600;
+--green: #c1d72e;
+--blue: #82d2e5;
+--grey:#f3f3f3;
+--white: #fff;
+--base-color: #141414;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: var(--base-color);
+    color: var(--white);
+}
+
+h1{
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 45px;
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+.display-ouput{
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+p{
+    font-size: 30px;
+}
+.keyboard button{
+    background-color: var(--white);
+    width: 45px;
+    height: 45px;
+    border: rgb(128, 116, 116) outset 1.5px;
+    border-radius: 5px;
+    margin: 3px;
+    font-size: 17px;
+    opacity: .8;
+    cursor:pointer;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    border-style: inset;
+}
+
+button:hover{
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    color: var(--white);
+    background-color: var(--base-color);
+    border: white inset 1px;
+}
+
+.hold .guess{
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    font-size:1.6em;
+}
+
+.hint-reset button{
+    /* @include corners (5px); */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    -khtml-border-radius: 5px; 
+    background:var(--base-color);
+    color:--white;
+    border: solid 1px --white;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:1.2em;
+    padding:18px 10px;
+    width:180px;
+    margin: 10px;
+    outline: none;
+}
+.hint-reset button:hover{
+/* @include transition; */
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+background:var(--white);
+border: solid 1px var(--white);
+color:var(--base-color);
+}
+ 
+.hangman canvas{
+    margin-bottom: 20px;
+    border: var(--white) dotted 2px;
+    /* width: 250px;
+    height: 150px; */
+}
+
+ .selected{
+    opacity: .1;
+} 

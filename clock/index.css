@@ -1,0 +1,37 @@
+body{
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(7, 6, 6);
+    color: rgb(145, 185, 218);
+    font-family: Orbitron;
+    text-align: center;
+    word-spacing: 10px;
+    margin-top: 15%;
+}
+
+.time div{
+    padding: 4px;
+}
+
+.time{
+    display: inline-flex;
+    font-size: 80px;
+}
+
+#session{
+    padding-left: 2rem;
+}
+
+
+
+button{
+    margin-top: 2em;
+    font-size: 20px;
+    border: rgb(71, 110, 141) inset;
+    border-radius: 2px;
+    background-color: rgb(145, 185, 218);
+    height: 2.5em;
+    color: rgb(8, 2, 94);
+}

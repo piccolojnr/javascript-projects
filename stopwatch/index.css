@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: rgba(189, 184, 184, 0.493);
+    display: block;
+}
+
+button{
+    width: 10em;
+    height: 3em;
+    border: rgb(100, 44, 47) inset;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #faf1f1;
+    background-color: rgb(100, 44, 47);
+}
+
+.stopwatch{
+    text-align: center;
+}
+
+.heading{
+    font-weight: bolder;
+    font-size: 2em;
+    color: #855858;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.time{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #441818;
+}
+
+ button :hover{
+    border: rgb(122, 47, 51) outset;
+    background-color: rgb(122, 47, 51);
+}

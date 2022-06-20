@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    margin-top: 10em;
+    background-color: rgb(23, 26, 29);
+    
+}
+
+.btns{
+    padding: 30px 0 30px 0;
+    max-width: 500px;
+    margin: auto;
+    border: rgb(174, 202, 226) solid 10px;
+    border-radius: 2px;
+    border-style: inset;
+    background-color: rgb(174, 202, 226);
+
+}
+
+button{
+    font-size: 1rem;
+    width: 6em;
+    height: 4em;
+    border: rgb(155, 160, 165) solid 2px;
+    border-radius: 2px;
+}
+
+.num-equals{
+    display: flex;
+    align-items: center;
+}
+
+#equals{
+    height: 14em;
+    background-color: rgb(68, 131, 226);
+    border: rgb(68, 131, 226)  solid 3px;
+    border-style: inset;
+    border-radius: 1px;
+}
+
+.equals ul{
+    padding-left: 5px;
+}
+
+.display{
+    border: rgb(155, 160, 165)  solid 3px;
+    border-style: inset;
+    border-radius: 1px;
+    margin-left: 40px;
+    margin-right: 65px;
+    height: 70px;
+    text-align: center;
+}
