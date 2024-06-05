@@ -30,8 +30,14 @@ button{
     margin-top: 2em;
     font-size: 20px;
     border: rgb(71, 110, 141) inset;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: rgb(145, 185, 218);
     height: 2.5em;
     color: rgb(8, 2, 94);
+    padding: 5px 10px;
+}
+
+button:hover{
+    background-color: rgb(8, 2, 94);
+    color: rgb(145, 185, 218);
 }

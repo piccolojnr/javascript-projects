@@ -61,5 +61,58 @@ class Deck:
         return self.cards.pop()
 
 
-deck = Deck()
-deck.show()
+
+class Player:
+    def __init__(self, name) -> None:
+        self.name = name
+        self.hand = []
+
+    def draw(self, deck):
+        self.hand.append(deck.drawCard())
+        return self
+
+    def showHand(self):
+        for card in self.hand:
+            card.show()
+
+    def discard(self):
+        return self.hand.pop()
+
+class Play:
+    def __init__(self) -> None:
+        self.deck = Deck()
+        self.deck.shuffle()
+        self.player = Player("Player 1")
+        self.dealer = Player("Dealer")
+        
+
+    def play(self):
+        self.player.draw(self.deck).draw(self.deck)
+        self.dealer.draw(self.deck).draw(self.deck)
+        self.player.showHand()
+        self.dealer.showHand()
+    
+    def hit(self):
+        self.player.draw(self.deck)
+        self.player.showHand()
+    
+    def stand(self):
+        pass
+    
+    def gameLoop(self):
+        self.play()
+        while True:
+            choice = input("Do you want to hit or stand? (h/s): ")
+            if choice == 'h':
+                self.hit()
+            elif choice == 's':
+                self.stand()
+                break
+            else:
+                print("Invalid choice. Please try again.")
+                continue
+            
+            
+if __name__ == "__main__":
+    game = Play()
+    game.gameLoop()

@@ -57,9 +57,9 @@ p{
 }
 
 button:hover{
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: var(--white);
     background-color: var(--base-color);
     border: white inset 1px;
@@ -81,7 +81,7 @@ button:hover{
     border-radius: 5px; 
     -khtml-border-radius: 5px; 
     background:var(--base-color);
-    color:--white;
+    color:var(--white);
     border: solid 1px --white;
     text-decoration:none;
     cursor:pointer;
@@ -93,9 +93,9 @@ button:hover{
 }
 .hint-reset button:hover{
 /* @include transition; */
--webkit-transition: all 0.5s ease-in-out;
--moz-transition: all 0.5s ease-in-out;
-transition: all 0.5s ease-in-out;
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
 background:var(--white);
 border: solid 1px var(--white);
 color:var(--base-color);

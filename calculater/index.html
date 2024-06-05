@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <div class="btns">
-        <div class="display">
-            <p id="display"></p>
+      <div class="display">
+        <p id="display" data-operations=""></p>
+      </div>
+      <div class="operators">
+        <ul class="first-row">
+          <button data-operation="+">+</button>
+          <button data-operation="-">-</button>
+          <button data-operation="x">x</button>
+          <button data-operation="÷">÷</button>
+        </ul>
+      </div>
+      <div class="num-equals">
+        <div class="numbers">
+          <ul class="second-row">
+            <button data-number="7">7</button>
+            <button data-number="8">8</button>
+            <button data-number="9">9</button>
+          </ul>
+          <ul class="third-row">
+            <button data-number="4">4</button>
+            <button data-number="5">5</button>
+            <button data-number="6">6</button>
+          </ul>
+          <ul class="fourth-row">
+            <button data-number="1">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+          </ul>
+          <ul class="fifth-row">
+            <button data-number="0">0</button>
+            <button data-number=".">.</button>
+            <button data-all-clear="">Clear</button>
+          </ul>
         </div>
-        <div class="operators">
-            <ul class="first-row">
-                <button onclick="Click('+')">+</button>
-                <button onclick="Click('-')">-</button>
-                <button onclick="Click('x')">x</button>
-                <button onclick="Click('÷')">÷</button>
-            </ul>
+        <div class="equals">
+          <ul>
+            <button data-delete="">back</button>
+          </ul>
+          <ul>
+            <button data-equals="" id="equals">=</button>
+          </ul>
         </div>
-        <div class="num-equals">
-            <div class="numbers">
-                <ul class="second-row">
-                    <button onclick='Click("7")'>7</button>
-                    <button onclick="Click('8')">8</button>
-                    <button onclick="Click('9')">9</button>
-                </ul><ul class="third-row">
-                    <button onclick="Click('4')">4</button>
-                    <button onclick="Click('5')">5</button>
-                    <button onclick="Click('6')">6</button>
-                </ul><ul class="fourth-row">
-                    <button id="one" onclick="Click('1')">1</button>
-                    <button id="two" onclick="Click('2')">2</button>
-                    <button id="three" onclick="Click('3')">3</button>
-                </ul><ul class="fifth-row">
-                    <button onclick="Click('0')">0</button>
-                    <button onclick="Click('.')">.</button>
-                    <button onclick="Clear()">C</button>
-                </ul>
-            </div>
-            <div class="equals">
-                <ul>
-                    <button id="back" onclick="Back()">back</button>
-                </ul>
-                <ul>
-                    <button id="equals" onclick="equals()">=</button>
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
 
-<script src="index.js"></script>    
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
