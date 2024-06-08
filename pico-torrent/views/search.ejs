@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Data Display</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="/"><h1>API Data Display</h1></a>
+      <!-- search filed -->
+      <div class="search">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by name or category"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <!-- divider -->
+      <hr />
+      <!-- results -->
+      <div id="results">
+        <div
+        
+          class="results-header"
+        >
+          <p id="results-count"><%- count %> results found.</p>
+          <p id="results-message"><%- message %></p>
+        </div>
+
+        <table class="blueTable">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Name</th>
+              <th>Added</th>
+              <th>Size</th>
+              <th>SE</th>
+              <th>LE</th>
+              <th>M</th>
+              <th>U</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="8">
+                <div class="links">
+                   <% if (page > 1) { %>
+                  <a href="<%= make_search_url(q,page-1,cat) %>">&laquo;</a>
+                  <a href="<%= make_search_url(q,page-1,cat) %>"><%= page - 1 %></a>
+                  <% } %>
+                  <a class="active" href="#" ><%= page %></a>
+                  <% if (data.length >= 100) { %>
+                  <a href="<%= make_search_url(q,page+1,cat) %>"><%= page + 1 %></a>
+                  <a href="<%= make_search_url(q,page+1,cat) %>">&raquo;</a>
+                  <% } %>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+          <tbody id="table-body">
+            <% if (data.length === 0) { %>
+            <p>No results found.</p>
+            <% } else { %> <% data.forEach(item => { %>
+            <tr
+              class="result-item"
+            >
+            <%- print_item(item) %>
+
+            </tr>
+              <% }) %> <% } %>
+            </tr>
+          </tbody>
+
+          <!-- </tr> -->
+        </table>
+      </div>
+    </div>
+    <script>
+      const search = document.getElementById("search");
+      const searchBtn = document.getElementById("search-btn");
+      const tableBody = document.getElementById("table-body");
+      const resultsCount = document.getElementById("results-count");
+      const resultsMessage = document.getElementById("results-message");
+
+      searchBtn.addEventListener("click", async () => {
+        const query = search.value;
+        const url = make_search_url(query);
+        window.location.href = url
+      });
+
+      function make_search_url(q, page = 1, cat = "") {
+        return "/search?q=" + encodeURIComponent(q) + "&page=" + page + "&cat=" + cat;
+      }
+    </script>
+  </body>
+</html>

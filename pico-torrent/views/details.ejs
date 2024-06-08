@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= description.name %> - Details</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/details.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <a href="/"><h1><%= description.name %> - Details</h1></a>
+      </div>
+
+      <div class="info">
+        <p>
+          <strong>Type:</strong> <%- print_category(description.category) %>
+        </p>
+        <p><strong>Files:</strong> <%= description.num_files %></p>
+        <p><strong>Size:</strong> <%= print_size(description.size) %></p>
+        <hr />
+        <p>
+          <strong>Username:</strong> <%- print_username(description.username) %>
+        </p>
+        <p><strong>Added:</strong> <%= print_date(description.added) %></p>
+        <hr />
+        <p><strong>Seeders:</strong> <%= description.seeders %></p>
+        <p><strong>Leechers:</strong> <%= description.leechers %></p>
+      </div>
+      <div class="buttons">
+        <%- print_magnet_button(description.info_hash, description.name) %>
+      </div>
+      <div class="description">
+        <pre><%= description.descr %></pre>
+      </div>
+      <div class="files">
+        <ul>
+          <% files.forEach(file => { %>
+          <li>
+            <p><%= file.name[0] %></p>
+            <p><%= print_size(file.size[0]) %></p>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
