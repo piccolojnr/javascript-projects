@@ -13,6 +13,7 @@ This repository contains a collection of JavaScript projects demonstrating vario
 7. **Ping Pong**
 8. **Stop Watch**
 9. **Tic Tac Toe**
+10. **Pico Torrent**
 
 ## Project Descriptions
 
@@ -42,6 +43,9 @@ A stopwatch application with start, stop, and reset functionalities.
 
 ### 9. Tic Tac Toe
 A classic tic tac toe game where two players alternate turns to place their marks on a 3x3 grid.
+
+### 10. Pico Torrent
+A simple torrent client that allows users to download torrent files using the WebTorrent library.
 
 ## Installation
 
